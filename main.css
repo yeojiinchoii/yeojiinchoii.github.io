@@ -3,9 +3,39 @@
 body {
     font-family: Open Sans, Helvetica, sans-serif, Arial;
     text-align: center;
-    background-color: #fff;
+    background-color: #F5F2EA;
+  }
+
+  a {
+    outline: none;
+    text-decoration: underline;
+  }
+  
+  a:link {
+    color: #000;
+  }
+  
+  a:visited {
+    color: #000;
+  }
+  
+  a:hover {
+    color: #666;
+  }
+  
+  .img-profile {
+    width: 120px;
+    margin: 16px;
   }
 
   .introduction {
-    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .contact {
+    margin: 36px;
   }
