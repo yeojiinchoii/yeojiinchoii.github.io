@@ -1,5 +1,6 @@
 body {
     font-family: 'source-serif-pro', 'Georgia', 'Cambria', 'Times New Roman', 'Times, serif';
+    scroll-behavior: smooth;
   }
 
   a {
@@ -102,6 +103,14 @@ body {
     height: 60vh;
   }
 
+  .hero-bg-google-insights-pump {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6)) , url("../images/hero-google-insights-pump.jpg");
+    background-repeat:no-repeat;
+    width: 100%; 
+    background-size: cover;  background-position: 50% 50%;
+    height: 60vh;
+  }
+
   .sub-title {
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
   }
@@ -174,47 +183,7 @@ body {
     margin: 36px;
   }
 
-  /* Back to top */
-  #button-top {
-    display: inline-block;
-    background-color: #FF9800;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s, 
-      opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-  }
-
-  #button-top::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: red;
-  }
-
-  #button-top:hover {
-    cursor: pointer;
-    background-color: #333;
-  }
-
-  #button-top:active {
-    background-color: #555;
-  }
-
-  #button-top.show {
-    opacity: 1;
-    visibility: visible;
-  }
+  
 
 /* Nav */
 .wrap-up-nav {
@@ -322,3 +291,51 @@ li {
   color: #555;
   border-bottom: 3px solid #555;
 }
+
+
+/* Back to top */
+.back-to-top {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem;
+}
+
+
+.back-to-top-wrapper {
+  position: absolute;
+  top: scrollLength 100vh;
+  right: 1.25rem;
+  bottom: -5em;
+  width: 3em;
+  pointer-events: none;
+}
+
+.back-to-top-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-align: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.25rem;
+}
+
+   .back-to-top-link {
+    position: fixed;
+    pointer-events: all;
+    top: calc(100vh - 5rem);
+  }
+
+  .back-to-top-icon {
+    display: flex;
+  }
