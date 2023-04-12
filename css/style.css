@@ -42,74 +42,6 @@ body {
     width: 100%;
   }
 
-  #hero-title {
-    position: absolute;
-    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
-    text-align: center;
-    width: 100%;
-    color: #ffffff;
-    margin-top: 160px;
-  }
-
-  #hero-tag {
-    margin-top: 260px;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    color: #ffffff;
-    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
-  }
-
-  .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2)) , url("../images/bg-blunt01.png");
-    background-repeat:no-repeat;
-    width: 100%; 
-    background-size: cover;  background-position: 50% 50%;
-    height: 60vh;
-  }
-
-  .hero-bg-wordle {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2)) , url("../images/hero-wordle.jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
-    width: 100%; 
-    height: 60vh;
-    background-position: right bottom;
-    background-color: #3A3A3C;
-  }
-
-  .hero-bg-digitalguru {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.3)) , url("../images/hero-digitalguru.png");
-    background-repeat:no-repeat;
-    width: 100%; 
-    background-size: cover;  background-position: center;
-    height: 60vh;
-    background-color: #ffffff;
-  }
-
-  .hero-bg-debitsuccess {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)) , url("../images/hero-debitsuccess.jpg");
-    background-repeat:no-repeat;
-    width: 100%; 
-    background-size: cover;  background-position: 50% 50%;
-    height: 60vh;
-  }
-
-  .hero-bg-youtube-delivery {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.4)) , url("../images/hero-youtube-delivery.png");
-    background-repeat:no-repeat;
-    width: 100%; 
-    background-size: cover;  background-position: 50% 50%;
-    height: 60vh;
-  }
-
-  .hero-bg-google-insights-pump {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6)) , url("../images/hero-google-insights-pump.jpg");
-    background-repeat:no-repeat;
-    width: 100%; 
-    background-size: cover;  background-position: 50% 50%;
-    height: 60vh;
-  }
 
   .sub-title {
     font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
@@ -181,15 +113,23 @@ body {
 
   .contact {
     margin: 36px;
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
   }
 
-  
+  .footer-small {
+    font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+  }
 
 /* Nav */
 .wrap-up-nav {
   padding-right: 10%;
   padding-left: 10%;
-  display: inline;
+  padding-top: 16px;
+}
+
+.wrap-up-nav-hero {
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .nav {
@@ -230,6 +170,7 @@ li {
   padding-left: 10%;
 }
 
+
 /* Nav Black */
 .wrap-up-nav-b {
   position: absolute;
@@ -264,15 +205,17 @@ li {
   border-bottom: 3px solid #999;
 }
 
+
+/* Nav Black */
 .logo-b {
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
   font-weight: 600;
   text-decoration: none;
   color: #000;
   font-size: 20px;
+  margin-top: -10px;
 }
 
-/* Nav Black */
 .nav-black {
   text-decoration: none;
   font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
@@ -285,6 +228,8 @@ li {
 .nav-black a {
   text-decoration: none;
   padding-left: 26px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .nav-black a:hover {
@@ -293,49 +238,108 @@ li {
 }
 
 
-/* Back to top */
-.back-to-top {
-  display: inline-block;
+
+/* Nav White */
+.logo-w p {
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+  font-weight: 600;
   text-decoration: none;
-  font-size: 2rem;
-  line-height: 3rem;
-  text-align: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.25rem;
+  color: #fff;
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+.nav-white {
+  text-decoration: none;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.nav-white a {
+  text-decoration: none;
+  padding-left: 26px;
+  padding-left: 16px;
+  padding-right: 16px;
+  color: #fff;
+}
+
+.nav-white a:hover {
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 
-.back-to-top-wrapper {
+  /* New styles added */
+
+.nav-items {
+  margin-top: 0px;
+}
+
+.hero {
+  height: 60vh;
+  position: relative;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+}
+
+.hero .content {
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
   position: absolute;
-  top: scrollLength 100vh;
-  right: 1.25rem;
-  bottom: -5em;
-  width: 3em;
-  pointer-events: none;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
 }
 
-.back-to-top-link {
-  display: inline-block;
+.hero a {
   text-decoration: none;
-  font-size: 1.5rem;
-  line-height: 3rem;
-  text-align: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 0.25rem;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
 }
 
-   .back-to-top-link {
-    position: fixed;
-    pointer-events: all;
-    top: calc(100vh - 5rem);
-  }
+.work-blunt {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../images/bg-blunt01.png");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
 
-  .back-to-top-icon {
-    display: flex;
-  }
+.work-debitsuccess {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/hero-debitsuccess.jpg");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
+
+
+.work-google-insights-pump {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../images/hero-google-insights-pump.jpg");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
+
+.work-digitalguru {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../images/hero-digitalguru.png");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
+
+.work-youtube-delivery {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url("../images/hero-youtube-delivery.png");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
+
+.work-wordle {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../images/hero-wordle.jpg");
+  background-repeat: no-repeat;
+  width: 100%; 
+  background-size: cover;  background-position: 50% 50%;
+}
