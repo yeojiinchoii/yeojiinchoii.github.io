@@ -15,25 +15,34 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro:200,300,400,600,700,900,900i' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="script.js"></script>
 </head>
 
-<body>
+<body class="page-index page-dark">
     <main>
     
     <section class="wrap-up-nav">
       <div class="container">
         <div class="row">
           <div class="col-auto me-auto">
-            <a href="index.html" class="logo-b"><p>YeoJin</p></a>
+            <a href="index.html" class="logo-w"><p>YeoJin</p></a>
           </div>
 
-          <div class="col-auto text-end">
-              <div class="nav-black">
-                  <a href="#"><p>WORK</p></a>
-                  <a href="about.html" aria-current="page"><p>ABOUT</p></a>
+          <div class="col-auto text-end site-nav">
+              <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+              <div class="nav-white">
+                  <a href="index.html" aria-current="page"><p>WORK</p></a>
+                  <span class="nav-dot" aria-hidden="true">·</span>
+                  <a href="about.html"><p>ABOUT</p></a>
+                  <span class="nav-dot" aria-hidden="true">·</span>
                   <a href="https://drive.google.com/file/d/1A-90vaS90h4Goeb_tJZxXWLGiag6eq44/view?usp=sharing" target="_blank"><p>RESUME</p></a>
               </div>
           </div>
@@ -41,29 +50,66 @@
       </div>
     </section>
  
-    <section class="wrap-up-list">
+    <section class="wrap-up-list work-list" id="work">
       <div class="container text-center">
         <div class="row">
           <div class="col">
-            <h1 class="display-5" id="title-b">
-              <a href="google-ads-digital-guru.html">Google Digital Guru</a>
-            </h1>
-            <h1 class="display-5" id="title-b">
-              <a href="google-insights-pump.html">Google Insights Pump</a>
-            </h1>
-            <h1 class="display-5" id="title-b">
-              <a href="youtube-delivery-korea.html">YouTube Delivery Korea</a> 
-            </h1>
-            <h1 class="display-5" id="title-b">
-              <a href="blunt.html">Blunt umbrellas</a>
-            </h1>
-            <h1 class="display-5" id="title-b">
-              <a href="debitsuccess.html">Debitsuccess
-              </a>
-            </h1>
-            <h1 class="display-5" id="title-b">
-              <a href="wordle.html">Wordle Game</a>
-            </h1>
+            <a class="work-item preview-aircanada" href="aircanada-app.html" aria-label="Air Canada mobile app">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2026</span>
+                <span class="title-short">Air Canada</span>
+                <span class="title-sub">Native iOS &amp; Android</span>
+              </h1>
+            </a>
+            <a class="work-item preview-digitalguru" href="google-ads-digital-guru.html" aria-label="Google Digital Guru 2022">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2022</span>
+                <span class="title-short">Digital Guru</span>
+                <span class="title-sub">Google Digital Education</span>
+              </h1>
+            </a>
+            <a class="work-item preview-insights" href="google-insights-pump.html" aria-label="Google Insights Pump 2022">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2022</span>
+                <span class="title-short">Insights Pump</span>
+                <span class="title-sub">Google Interactive Presentation</span>
+              </h1>
+            </a>
+            <a class="work-item preview-youtube" href="youtube-delivery-korea.html" aria-label="YouTube Delivery Korea 2021">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2021</span>
+                <span class="title-short">YouTube</span>
+                <span class="title-sub">Digital Marketing</span>
+              </h1>
+            </a>
+            <a class="work-item preview-blunt" href="blunt.html" aria-label="Blunt Umbrellas">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2021</span>
+                <span class="title-short">Blunt</span>
+                <span class="title-sub">Conversion Optimization</span>
+              </h1>
+            </a>
+            <a class="work-item preview-debitsuccess" href="debitsuccess.html" aria-label="Debitsuccess">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2019</span>
+                <span class="title-short">Debitsuccess</span>
+                <span class="title-sub">CRM Experience</span>
+              </h1>
+            </a>
+            <a class="work-item preview-wordle" href="wordle.html" aria-label="Wordle game">
+              <span class="work-item-bg" aria-hidden="true"></span>
+              <h1 class="display-5 title-b">
+                <span class="title-year">2023</span>
+                <span class="title-short">Wordle</span>
+                <span class="title-sub">Game Experience</span>
+              </h1>
+            </a>
           </div>
         </div>
       </div>
@@ -74,7 +120,7 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-auto me-auto">
-              <p><small class="footer-small">© Yeojin Choi, 2024</small></p>
+              <p><small class="footer-small">© Yeojin Choi, 2026</small></p>
             </div>
             <div class="col-auto">
               <a href="https://www.linkedin.com/in/yeojinchoi/" target="_blank" id="icon"><i class="fa fa-linkedin-square fa-1x"></i></a>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeojin - Portfolio</title>
+    <title>Yeojin - About</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -15,25 +15,34 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro:200,300,400,600,700,900,900i' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="script.js"></script>
 </head>
 
-<body>
+<body class="page-about page-dark">
     <main>
 
         <section class="wrap-up-nav">
             <div class="container">
               <div class="row">
                 <div class="col-auto me-auto">
-                  <a href="index.html" class="logo-b"><p>YeoJin</p></a>
+                  <a href="index.html" class="logo-w"><p>YeoJin</p></a>
                 </div>
     
-                <div class="col-auto text-end">
-                    <div class="nav-black">
+                <div class="col-auto text-end site-nav">
+                    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav-white">
                         <a href="index.html"><p>WORK</p></a>
-                        <a href="#" aria-current="page"><p>ABOUT</p></a>
+                        <span class="nav-dot" aria-hidden="true">·</span>
+                        <a href="about.html" aria-current="page"><p>ABOUT</p></a>
+                        <span class="nav-dot" aria-hidden="true">·</span>
                         <a href="https://drive.google.com/file/d/1A-90vaS90h4Goeb_tJZxXWLGiag6eq44/view?usp=sharing" target="_blank"><p>RESUME</p></a>
                     </div>
                 </div>
@@ -41,24 +50,29 @@
             </div>
           </section>
 
-
-        <section class="wrap-up">
-            <div class="container text-center">
-                <div class="col-md-6 offset-md-3">
-                    <img src="images/profile-yeojin.png" class="img-profile" alt="yeojin">
-                    <p class="sub-title">Hi! Nice to meet you!</p>
-                    <h1>I'm Yeojin, a UX/UI Designer who can code.<br>I make products that people love.</h1>
-                    <p class="contact">Contact me: <a href="mailto:yeojiinchoii@gmail.com">yeojiinchoii@gmail.com</a> or via <a href="https://www.linkedin.com/in/yeojinchoi/" target="_blank">LinkedIn</a></p>
-                </div>
+        <section class="about-section">
+          <img src="images/profile-yeojin.png" class="img-profile about-profile" alt="Yeojin Choi">
+          <div class="about-copy" data-about-manifest>
+            <div class="about-lead">
+              <p>I’m Yeojin<button class="name-say" type="button" aria-label="Play pronunciation of Yeojin" title="How to say Yeojin"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.4v5.2h3.3L12 18.8V5.2L7.3 9.4H4z" fill="currentColor" stroke="none"></path><path d="M15.15 8.7a4.15 4.15 0 0 1 0 6.6"></path><path d="M17.45 6.2a7.3 7.3 0 0 1 0 11.6"></path></svg></button>, a product designer, design engineer, and strategist working across product, technology, and digital experience. I’ve helped teams at <a href="google-ads-digital-guru.html">Google</a>, <a href="aircanada-app.html">Air Canada</a>, and <a href="youtube-delivery-korea.html">YouTube</a> bring products from ideas to experiences people actually use.</p>
+            </div>
+            <div class="about-body">
+              <p>Currently at <a href="aircanada-app.html">Air Canada</a>, I lead mobile experiences across iOS and Android, shaping products from strategy and discovery through design and delivery. I work closely with product and engineering to simplify complex problems and turn ideas into meaningful digital experiences.</p>
+              <p>My work brings together design, user research, data, technology, and AI to make informed decisions and create experiences that are clear, intuitive, and natural. I enjoy getting close to the technology, using code and emerging tools to prototype, experiment, and bring ideas to life.</p>
+              <p>I’m drawn to the details that shape how a product feels, creating experiences that are thoughtful, calm, and human.</p>
+            </div>
+          </div>
+          <div class="about-actions">
+              <a class="about-btn about-btn-ghost" href="https://www.linkedin.com/in/yeojinchoi/" target="_blank" rel="noopener noreferrer">More about me <span aria-hidden="true">↗</span></a>
+              <a class="about-btn about-btn-solid" href="https://drive.google.com/file/d/1A-90vaS90h4Goeb_tJZxXWLGiag6eq44/view?usp=sharing" target="_blank" rel="noopener noreferrer"><i class="fa fa-download" aria-hidden="true"></i> Download resume</a>
             </div>
         </section>
-
 
         <footer class="wrap-up">
             <div class="container text-center">
               <div class="row">
                 <div class="col-auto me-auto">
-                  <p><small class="footer-small">© Yeojin Choi, 2024</small></p>
+                  <p><small class="footer-small">© Yeojin Choi, 2026</small></p>
                 </div>
                 <div class="col-auto">
                   <a href="https://www.linkedin.com/in/yeojinchoi/" target="_blank" id="icon"><i class="fa fa-linkedin-square fa-1x"></i></a>

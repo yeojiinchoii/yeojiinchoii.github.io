@@ -8,7 +8,7 @@ body {
 
   a {
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   a:link {
@@ -21,6 +21,7 @@ body {
   
   a:hover {
     color: #666;
+    text-decoration: none;
   }
   
   .img-profile {

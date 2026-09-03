@@ -15,7 +15,9 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source Serif Pro:200,300,400,600,700,900,900i' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="script.js"></script>
@@ -24,30 +26,36 @@
 <body>
     <main>
 
-      <section class="hero work-debitsuccess">
-        <div class="wrap-up-nav-hero">
-          <div class="container">
-            <div class="nav-items">
-              <div class="row">
-                <div class="col-auto me-auto">
-                  <a href="index.html" class="logo-w"><p>YeoJin</p></a>
-                </div>
-    
-                <div class="col-auto text-end">
-                    <div class="nav-white">
-                        <a href="index.html"><p>WORK</p></a>
-                        <a href="about.html" aria-current="page"><p>ABOUT</p></a>
-                        <a href="https://drive.google.com/file/d/1A-90vaS90h4Goeb_tJZxXWLGiag6eq44/view?usp=sharing" target="_blank"><p>RESUME</p></a>
-                    </div>
-                </div>
+          <section class="wrap-up-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-auto me-auto">
+            <a href="index.html" class="logo-w"><p>YeoJin</p></a>
+          </div>
+          <div class="col-auto text-end site-nav">
+              <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </button>
+              <div class="nav-white">
+                  <a href="index.html" aria-current="page"><p>WORK</p></a>
+                  <span class="nav-dot" aria-hidden="true">·</span>
+                  <a href="about.html"><p>ABOUT</p></a>
+                  <span class="nav-dot" aria-hidden="true">·</span>
+                  <a href="https://drive.google.com/file/d/1A-90vaS90h4Goeb_tJZxXWLGiag6eq44/view?usp=sharing" target="_blank"><p>RESUME</p></a>
               </div>
-            </div>
-            <div class="text-center content">
-              <h1 class="display-2 text-white">DEBITSUCCESS</h1>
-              <p class="text-white"><small>CRM PROJECT • UX/UI DESIGN</small></p>
-            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+<section class="hero work-debitsuccess">
+        <div class="text-center content">
+              <h1 class="display-2 text-white">Debitsuccess</h1>
+              <p class="text-white"><small>CRM Experience • UX/UI Design</small></p>
+            </div>
+        
       </section>
 
 
@@ -705,7 +713,7 @@
         <div class="container text-center">
           <div class="row">
             <div class="col-auto me-auto">
-              <p><small class="footer-small">© Yeojin Choi, 2024</small></p>
+              <p><small class="footer-small">© Yeojin Choi, 2026</small></p>
             </div>
             <div class="col-auto">
               <a href="https://www.linkedin.com/in/yeojinchoi/" target="_blank" id="icon"><i class="fa fa-linkedin-square fa-1x"></i></a>
@@ -720,7 +728,7 @@
 
     </main>
 
-    <button class="btn btn-sm btn-secondary rounded-circle position-fixed bottom-0 end-0 translate-middle d-none" onclick="scrollToTop()" id="back-to-up">
+    <button class="d-none" type="button" onclick="scrollToTop()" id="back-to-up" aria-label="Back to top">
       <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </button>
     
