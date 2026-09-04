@@ -486,11 +486,11 @@ body {
 .wrap-up-nav::before,
 .wrap-up-nav-hero .nav-items::before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
-  top: calc(-1 * env(safe-area-inset-top, 0px) - 32px);
-  height: calc(100% + 4.25rem + env(safe-area-inset-top, 0px) + 32px);
+  top: 0;
+  height: calc(env(safe-area-inset-top, 0px) + 5.75rem);
   z-index: 0;
   pointer-events: none;
   background: var(--nav-glass);
@@ -499,19 +499,19 @@ body {
   mask-image: linear-gradient(
     to bottom,
     #000 0%,
-    #000 22%,
-    rgba(0, 0, 0, 0.72) 40%,
-    rgba(0, 0, 0, 0.38) 58%,
-    rgba(0, 0, 0, 0.12) 78%,
+    #000 28%,
+    rgba(0, 0, 0, 0.78) 46%,
+    rgba(0, 0, 0, 0.42) 64%,
+    rgba(0, 0, 0, 0.12) 82%,
     transparent 100%
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
     #000 0%,
-    #000 22%,
-    rgba(0, 0, 0, 0.72) 40%,
-    rgba(0, 0, 0, 0.38) 58%,
-    rgba(0, 0, 0, 0.12) 78%,
+    #000 28%,
+    rgba(0, 0, 0, 0.78) 46%,
+    rgba(0, 0, 0, 0.42) 64%,
+    rgba(0, 0, 0, 0.12) 82%,
     transparent 100%
   );
   transition: background-color 0.55s ease;
