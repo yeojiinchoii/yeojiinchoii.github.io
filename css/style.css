@@ -579,8 +579,36 @@ body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 899.98px) {
     :root {
-      --status-cover-h: 18px;
+      --status-cover-h: 24px;
     }
+
+    .wrap-up-nav,
+    .wrap-up-nav-hero .nav-items {
+      padding-top: calc(var(--status-cover-h) + 0.15rem);
+    }
+
+    .page-index main,
+    .page-dark main,
+    .page-about main {
+      padding-top: calc(3.15rem + var(--status-cover-h));
+    }
+  }
+}
+
+@media (max-width: 899.98px) and (pointer: coarse) {
+  :root {
+    --status-cover-h: 24px;
+  }
+
+  .wrap-up-nav,
+  .wrap-up-nav-hero .nav-items {
+    padding-top: calc(var(--status-cover-h) + 0.15rem);
+  }
+
+  .page-index main,
+  .page-dark main,
+  .page-about main {
+    padding-top: calc(3.15rem + var(--status-cover-h));
   }
 }
 
