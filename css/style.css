@@ -373,9 +373,30 @@ body {
     }
 
     .work-item .title-b {
-      justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      gap: 0.35rem;
       color: #fff;
       text-shadow: 0 1px 16px rgba(0, 0, 0, 0.55);
+    }
+
+    .work-item .title-year {
+      min-width: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    .work-item .title-short {
+      width: 100%;
+    }
+
+    .work-item .title-sub,
+    .work-item .title-year {
+      align-self: flex-start;
+      padding-bottom: 0;
     }
   }
 
@@ -444,7 +465,7 @@ body {
   right: 0;
   z-index: 200;
   width: 100%;
-  padding: clamp(0.75rem, 1.8vw, 1.05rem) var(--page-gutter) clamp(0.45rem, 1.2vw, 0.7rem);
+  padding: calc(clamp(0.75rem, 1.8vw, 1.05rem) + env(safe-area-inset-top, 0px)) var(--page-gutter) clamp(0.45rem, 1.2vw, 0.7rem);
   color: var(--nav-fg);
   background: transparent;
   overflow: visible;
@@ -457,8 +478,8 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  top: 0;
-  height: calc(100% + 4.25rem);
+  top: calc(-1 * env(safe-area-inset-top, 0px));
+  height: calc(100% + 4.25rem + env(safe-area-inset-top, 0px));
   z-index: 0;
   pointer-events: none;
   background: var(--nav-glass);
@@ -497,6 +518,33 @@ body {
   --nav-glass: rgba(255, 255, 255, 0.08);
 }
 
+@media (max-width: 899.98px) {
+  .page-index .wrap-up-nav,
+  .page-dark .wrap-up-nav {
+    --nav-glass: rgba(18, 18, 18, 0.82);
+  }
+
+  .wrap-up-nav::before,
+  .wrap-up-nav-hero .nav-items::before {
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 48%,
+      rgba(0, 0, 0, 0.7) 68%,
+      rgba(0, 0, 0, 0.22) 86%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 48%,
+      rgba(0, 0, 0, 0.7) 68%,
+      rgba(0, 0, 0, 0.22) 86%,
+      transparent 100%
+    );
+  }
+}
+
 .wrap-up-nav-hero {
   padding: 0;
 }
@@ -504,7 +552,7 @@ body {
 .page-index main,
 .page-dark main,
 .page-about main {
-  padding-top: 3.85rem;
+  padding-top: calc(3.85rem + env(safe-area-inset-top, 0px));
 }
 
 .page-index .intro-section {
