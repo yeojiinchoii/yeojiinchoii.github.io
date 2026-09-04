@@ -1,6 +1,8 @@
 :root {
   --page-gutter: clamp(1.25rem, 5vw, 4rem);
   --bg-dark: #121212;
+  --accent: #007AFF;
+  --accent-hover: #0066D6;
   --text-body: #555555;
   --text-heading: #1a1a1a;
   --font-body: 'Open Sans', sans-serif;
@@ -43,6 +45,8 @@ body {
   .page-dark {
     background: var(--bg-dark);
     color: #fff;
+    --accent: #0A84FF;
+    --accent-hover: #409CFF;
   }
 
   .page-dark h1, .page-dark h2, .page-dark h3,
@@ -471,6 +475,7 @@ body {
   --nav-fg: #fff;
   --nav-glass: rgba(18, 18, 18, 0.04);
   --nav-cover: #fff;
+  --accent: #0A84FF;
   position: fixed;
   top: 0;
   left: 0;
@@ -546,6 +551,7 @@ body {
 .wrap-up-nav-hero .nav-items.is-light {
   --nav-fg: #1a1a1a;
   --nav-glass: rgba(255, 255, 255, 0.08);
+  --accent: #007AFF;
 }
 
 .wrap-up-nav-hero {
@@ -636,12 +642,12 @@ body {
 
 .page-dark .about-copy a .about-char.is-active,
 .about-copy a .about-char.is-active {
-  color: #5eb3e8;
+  color: var(--accent);
 }
 
 .page-dark .about-copy a:hover .about-char.is-active,
 .about-copy a:hover .about-char.is-active {
-  color: #8cc8ef;
+  color: var(--accent-hover);
 }
 
 .about-fade .about-char.is-active {
@@ -656,7 +662,7 @@ body {
   }
 
   .about-copy a .about-char {
-    color: #5eb3e8 !important;
+    color: var(--accent) !important;
   }
 }
 
@@ -701,7 +707,7 @@ body {
 }
 
 .name-say.is-playing {
-  color: #5eb3e8;
+  color: var(--accent);
 }
 
 .about-body p:last-child {
@@ -918,7 +924,7 @@ li {
 .page-dark .nav-white a[aria-current="page"]:link,
 .page-dark .nav-white a[aria-current="page"]:visited,
 .page-dark .nav-white a[aria-current="page"]:hover {
-  color: #5eb3e8;
+  color: var(--accent);
 }
 
 .nav-white a[aria-current="page"]:hover p,
