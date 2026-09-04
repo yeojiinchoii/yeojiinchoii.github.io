@@ -579,18 +579,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 899.98px) {
     :root {
-      --status-cover-h: max(28px, calc(env(safe-area-inset-top, 0px) - 12px));
-    }
-
-    .wrap-up-nav,
-    .wrap-up-nav-hero .nav-items {
-      padding-top: calc(clamp(0.5rem, 1.4vw, 0.8rem) + var(--status-cover-h));
-    }
-
-    .page-index main,
-    .page-dark main,
-    .page-about main {
-      padding-top: calc(3.5rem + var(--status-cover-h));
+      --status-cover-h: 18px;
     }
   }
 }
