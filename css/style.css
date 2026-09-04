@@ -365,8 +365,8 @@ body {
     .work-item.preview-digitalguru .work-item-bg {
       position: absolute;
       inset: 0;
-      width: auto;
-      height: auto;
+      width: auto !important;
+      height: auto !important;
       transform: none;
       opacity: 1;
       box-shadow: none;
@@ -379,6 +379,9 @@ body {
       justify-content: flex-end;
       flex-wrap: nowrap;
       gap: 0.35rem;
+      width: 100%;
+      max-width: 100%;
+      font-size: clamp(2.2rem, 11.5vw, 3.15rem);
       color: #fff;
       text-shadow: 0 1px 16px rgba(0, 0, 0, 0.55);
     }
@@ -397,6 +400,14 @@ body {
     .work-item .title-year {
       align-self: flex-start;
       padding-bottom: 0;
+    }
+
+    .work-item.preview-debitsuccess .work-item-bg {
+      background-position: 50% 35%;
+    }
+
+    .work-item.preview-wordle .work-item-bg {
+      background-position: 72% 12%;
     }
   }
 
@@ -521,7 +532,21 @@ body {
 @media (max-width: 899.98px) {
   .page-index .wrap-up-nav,
   .page-dark .wrap-up-nav {
-    --nav-glass: rgba(18, 18, 18, 0.82);
+    background: #121212;
+    --nav-glass: #121212;
+  }
+
+  .page-index .wrap-up-nav::after,
+  .page-dark .wrap-up-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -120px;
+    height: calc(120px + 100%);
+    background: #121212;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .wrap-up-nav::before,
@@ -1285,29 +1310,31 @@ li {
   background-color: #1c1c1c;
 }
 
-.work-item.preview-debitsuccess .work-item-bg,
-.work-item.preview-youtube .work-item-bg,
-.work-item.preview-wordle .work-item-bg,
-.work-item.preview-digitalguru .work-item-bg {
-  width: min(430px, 48vw);
-  height: min(620px, 72vh);
-  background-size: cover;
-}
+@media (hover: hover) and (pointer: fine) {
+  .work-item.preview-debitsuccess .work-item-bg,
+  .work-item.preview-youtube .work-item-bg,
+  .work-item.preview-wordle .work-item-bg,
+  .work-item.preview-digitalguru .work-item-bg {
+    width: min(430px, 48vw);
+    height: min(620px, 72vh);
+    background-size: cover;
+  }
 
-.work-item.preview-debitsuccess .work-item-bg {
-  background-position: 64% 38%;
-}
+  .work-item.preview-debitsuccess .work-item-bg {
+    background-position: 64% 38%;
+  }
 
-.work-item.preview-youtube .work-item-bg {
-  background-position: 42% 50%;
-}
+  .work-item.preview-youtube .work-item-bg {
+    background-position: 42% 50%;
+  }
 
-.work-item.preview-wordle .work-item-bg {
-  background-position: 100% 0%;
-}
+  .work-item.preview-wordle .work-item-bg {
+    background-position: 100% 0%;
+  }
 
-.work-item.preview-digitalguru .work-item-bg {
-  background-position: 0% 50%;
+  .work-item.preview-digitalguru .work-item-bg {
+    background-position: 0% 50%;
+  }
 }
 
 .work-youtube-delivery {
