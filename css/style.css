@@ -24,20 +24,19 @@ html:has(body.page-dark) {
   background: var(--bg-dark);
 }
 
-html::before {
-  content: "";
+.status-cover {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10000;
-  height: constant(safe-area-inset-top);
   height: env(safe-area-inset-top, 0px);
   background: #fff;
   pointer-events: none;
 }
 
-html:has(body.page-dark)::before {
+.page-index .status-cover,
+.page-dark .status-cover {
   background: var(--bg-dark);
 }
 
@@ -525,8 +524,8 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: env(safe-area-inset-top, 0px);
-  height: 5.75rem;
+  top: 0;
+  height: calc(env(safe-area-inset-top, 0px) + 5.75rem);
   z-index: 0;
   pointer-events: none;
   background: var(--nav-glass);
@@ -574,6 +573,25 @@ body {
 .page-dark main,
 .page-about main {
   padding-top: calc(3.85rem + env(safe-area-inset-top, 0px));
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 899.98px) {
+    .status-cover {
+      height: max(47px, env(safe-area-inset-top, 0px));
+    }
+
+    .wrap-up-nav,
+    .wrap-up-nav-hero .nav-items {
+      padding-top: calc(clamp(0.75rem, 1.8vw, 1.05rem) + max(47px, env(safe-area-inset-top, 0px)));
+    }
+
+    .page-index main,
+    .page-dark main,
+    .page-about main {
+      padding-top: calc(3.85rem + max(47px, env(safe-area-inset-top, 0px)));
+    }
+  }
 }
 
 .page-index .intro-section {
