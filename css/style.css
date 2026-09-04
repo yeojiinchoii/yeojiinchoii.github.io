@@ -579,7 +579,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 899.98px) {
     :root {
-      --status-cover-h: 24px;
+      --status-cover-h: 19px;
     }
 
     .wrap-up-nav,
@@ -597,7 +597,7 @@ body {
 
 @media (max-width: 899.98px) and (pointer: coarse) {
   :root {
-    --status-cover-h: 24px;
+    --status-cover-h: 19px;
   }
 
   .wrap-up-nav,
