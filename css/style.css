@@ -470,6 +470,7 @@ body {
 .wrap-up-nav-hero .nav-items {
   --nav-fg: #fff;
   --nav-glass: rgba(18, 18, 18, 0.04);
+  --nav-cover: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -481,6 +482,11 @@ body {
   background: transparent;
   overflow: visible;
   transition: --nav-fg 0.55s ease;
+}
+
+.page-index .wrap-up-nav,
+.page-dark .wrap-up-nav {
+  --nav-cover: var(--bg-dark);
 }
 
 .wrap-up-nav::before,
@@ -521,6 +527,19 @@ body {
 .wrap-up-nav-hero .nav-items > * {
   position: relative;
   z-index: 1;
+}
+
+.wrap-up-nav::after,
+.wrap-up-nav-hero .nav-items::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top, 0px);
+  background: var(--nav-cover);
+  z-index: 2;
+  pointer-events: none;
 }
 
 .wrap-up-nav.is-light,
