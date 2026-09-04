@@ -16,6 +16,31 @@
   --hero-wordle: url("../images/hero-wordle.jpg");
 }
 
+html {
+  background: #fff;
+}
+
+html:has(body.page-dark) {
+  background: var(--bg-dark);
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  height: constant(safe-area-inset-top);
+  height: env(safe-area-inset-top, 0px);
+  background: #fff;
+  pointer-events: none;
+}
+
+html:has(body.page-dark)::before {
+  background: var(--bg-dark);
+}
+
 body {
     font-family: var(--font-body);
     scroll-behavior: smooth;
@@ -500,8 +525,8 @@ body {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
-  height: calc(env(safe-area-inset-top, 0px) + 5.75rem);
+  top: env(safe-area-inset-top, 0px);
+  height: 5.75rem;
   z-index: 0;
   pointer-events: none;
   background: var(--nav-glass);
@@ -532,19 +557,6 @@ body {
 .wrap-up-nav-hero .nav-items > * {
   position: relative;
   z-index: 1;
-}
-
-.wrap-up-nav::after,
-.wrap-up-nav-hero .nav-items::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: env(safe-area-inset-top, 0px);
-  background: var(--nav-cover);
-  z-index: 2;
-  pointer-events: none;
 }
 
 .wrap-up-nav.is-light,
