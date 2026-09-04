@@ -527,44 +527,53 @@ body {
 .wrap-up-nav-hero .nav-items.is-light {
   --nav-fg: #1a1a1a;
   --nav-glass: rgba(255, 255, 255, 0.08);
+  --nav-cover: #fff;
 }
 
 @media (max-width: 899.98px) {
-  .page-index .wrap-up-nav,
-  .page-dark .wrap-up-nav {
-    background: #121212;
+  .wrap-up-nav,
+  .wrap-up-nav-hero .nav-items {
+    --nav-cover: #121212;
     --nav-glass: #121212;
+    background: var(--nav-cover);
   }
 
-  .page-index .wrap-up-nav::after,
-  .page-dark .wrap-up-nav::after {
+  .wrap-up-nav.is-light,
+  .wrap-up-nav-hero .nav-items.is-light {
+    --nav-cover: #fff;
+    --nav-glass: #fff;
+    background: #fff;
+  }
+
+  .wrap-up-nav::after,
+  .wrap-up-nav-hero .nav-items::after {
     content: "";
-    position: absolute;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
-    top: -120px;
-    height: calc(120px + 100%);
-    background: #121212;
+    height: calc(env(safe-area-inset-top, 47px) + 4.6rem);
+    background: var(--nav-cover);
     z-index: 0;
     pointer-events: none;
   }
 
   .wrap-up-nav::before,
   .wrap-up-nav-hero .nav-items::before {
+    top: 0;
+    height: calc(100% + 2.5rem);
     mask-image: linear-gradient(
       to bottom,
       #000 0%,
-      #000 48%,
-      rgba(0, 0, 0, 0.7) 68%,
-      rgba(0, 0, 0, 0.22) 86%,
+      #000 55%,
+      rgba(0, 0, 0, 0.45) 78%,
       transparent 100%
     );
     -webkit-mask-image: linear-gradient(
       to bottom,
       #000 0%,
-      #000 48%,
-      rgba(0, 0, 0, 0.7) 68%,
-      rgba(0, 0, 0, 0.22) 86%,
+      #000 55%,
+      rgba(0, 0, 0, 0.45) 78%,
       transparent 100%
     );
   }
