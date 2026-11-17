@@ -1555,7 +1555,7 @@ body.nav-open #back-to-up:not(.d-none) {
 }
 
 .case-visual-band--recognition .asset-ph-stage img {
-  clip-path: inset(0 round 30px);
+  clip-path: inset(0 round 16px);
 }
 
 .asset-ph {
