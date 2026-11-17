@@ -1546,7 +1546,7 @@ body.nav-open #back-to-up:not(.d-none) {
 
 .case-visual-band--recognition .asset-ph {
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 15px;
 }
 
 .case-visual-band--recognition .asset-ph-stage,
