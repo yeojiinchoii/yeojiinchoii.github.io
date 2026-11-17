@@ -1544,6 +1544,10 @@ body.nav-open #back-to-up:not(.d-none) {
   margin-right: auto;
 }
 
+.case-visual-band--recognition .asset-ph-stage {
+  border-radius: 30px;
+}
+
 .asset-ph {
   margin: 0 0 1.25rem;
 }
