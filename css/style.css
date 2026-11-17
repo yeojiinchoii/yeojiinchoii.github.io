@@ -1544,6 +1544,11 @@ body.nav-open #back-to-up:not(.d-none) {
   margin-right: auto;
 }
 
+.case-visual-band--recognition .asset-ph {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
 .case-visual-band--recognition .asset-ph-stage,
 .case-visual-band--recognition .asset-ph-stage img {
   border-radius: 30px;
